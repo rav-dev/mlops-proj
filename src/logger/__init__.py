@@ -28,6 +28,12 @@ def configure_logger():
     stop logging in that .log file, rather creates the new file and starts logging in it. We have also 
     set the backup as 3 files so at the most for one execution we can have at most 3 files.
     """
+
+    #get rid of pymondo noisy warnings
+    logging.getLogger("pymongo").setLevel(logging.WARNING)
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+    logging.getLogger("matplotlib").setLevel(logging.WARNING)
+
     #create a custom logger 
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
