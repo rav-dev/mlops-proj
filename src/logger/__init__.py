@@ -34,6 +34,12 @@ def configure_logger():
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.getLogger("matplotlib").setLevel(logging.WARNING)
 
+    # Suppress verbose debug output from AWS libraries and dependencies
+    logging.getLogger("boto3").setLevel(logging.WARNING)
+    logging.getLogger("botocore").setLevel(logging.WARNING)
+    logging.getLogger("s3transfer").setLevel(logging.WARNING)
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+
     #create a custom logger 
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
