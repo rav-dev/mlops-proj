@@ -75,3 +75,6 @@ MODEL Evaluation related constants
 MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
 MODEL_BUCKET_NAME = "rav-model-mlopsproj"
 MODEL_PUSHER_S3_KEY = "model-registry"
+
+APP_HOST = "0.0.0.0"
+APP_PORT = 5000
